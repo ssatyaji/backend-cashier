@@ -1,10 +1,9 @@
 var router = express.Router();
-
+import categories from './categories.js';
+import products from './products.js';
 import express from 'express';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.json({ title: 'Express' });
-});
+router.use('/categories', categories);
+router.use('/products', products);
 
 export default router;
